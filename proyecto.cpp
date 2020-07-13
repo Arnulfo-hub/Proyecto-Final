@@ -11,9 +11,9 @@ float costoPorArticul;
 };
 
 //funciones 
-void ingresar(costoPorArticulo *, int);
-void mostrar(costoPorArticulo *, int);
-float total(costoPorArticulo *datos, int);
+void ingresar(costoPorArticulo *, int n);
+void mostrar(costoPorArticulo *, int n);
+float total(costoPorArticulo *datos, int n);
 
 int main(void){
 
@@ -35,8 +35,10 @@ return 0;
 //Funcion que pide al usuario los articulos comprados 
 void ingresar(costoPorArticulo *datos, int n){
 int i;
+
 cout<<"Ingrese el nombre del articulo que compro, cantidad y precio unitario:"<<endl;
     for(i = 0; i < n; i++){
+        
         cout<<"Nombre: ";
         cin>>(datos + i)->nombreArticul;
         cout<<"Cantidad: ";
@@ -48,9 +50,12 @@ cout<<"Ingrese el nombre del articulo que compro, cantidad y precio unitario:"<<
 
 //Funcion que muestra los articulos comprados con su nombre cantidad comprada y su precio
 void mostrar(costoPorArticulo *datos, int n){
+
 int i;
-cout<<""<<endl;
+
+cout<<endl;
 cout << "Los articulos comprados son:"<<endl<<endl;
+    
     for(i = 0; i < n; i++){
         cout<<"Nombre: ";
         cout<<(datos + i)->nombreArticul<<endl;
